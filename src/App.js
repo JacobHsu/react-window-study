@@ -1,20 +1,41 @@
+import React from "react";
+import faker from "faker";
+import Button from "@material-ui/core/Button";
+import Container from "@material-ui/core/Container";
+import SimpleCard from "./components/SimpleCard";
+
 function App() {
+  
+  const [data, setData] = React.useState(null);
+  const subheader = faker.date.past().toString();
+
+  const handleLoadData = () => {
+    setData(
+      Array.from({ length: 100 }).map(() => {
+        return faker.lorem.sentence();
+      })
+    );
+  };
+
+  if (!data) {
+    return (
+      <Button
+        variant="contained"
+        color="primary"
+        disableElevation
+        onClick={handleLoadData}
+      >
+        Load Data
+      </Button>
+    );
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container maxWidth="sm">
+      {data.map((_, index) => (
+        <SimpleCard key={index} index={index} data={data} date={subheader}/>
+      ))}
+    </Container>
   );
 }
 

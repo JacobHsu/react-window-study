@@ -1,5 +1,11 @@
 # Getting Started with Create React App
 
+[React-window | 有效地呈現大型列表與表格](https://medium.com/%E6%89%8B%E5%AF%AB%E7%AD%86%E8%A8%98/virtualize-long-list-with-react-window-95bac3673a91)
+
+windowing 只需要渲染長列表的某一部分
+
+[react without windowing](https://codesandbox.io/s/react-without-virtualized-load-data-fi0m6?from-embed)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
