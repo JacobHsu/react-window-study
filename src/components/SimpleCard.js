@@ -43,7 +43,7 @@ const useStyles = makeStyles(theme =>
   })
 );
 
-const SimpleCard = ({ index, style, data, date }) => {
+const SimpleCard = ({ index, style, data }) => {
   const classes = useStyles();
 
   return (
@@ -61,11 +61,11 @@ const SimpleCard = ({ index, style, data, date }) => {
             </IconButton>
           }
           title={`Title ${index}`}
-          subheader={date}
+          subheader={data.date}
         />
         <CardContent>
           <Typography variant="body2" color="textSecondary" component="p">
-            {data[index]}
+            {data.item[index]}
           </Typography>
         </CardContent>
         <CardActions disableSpacing>
