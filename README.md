@@ -10,6 +10,11 @@ windowing 只需要渲染長列表的某一部分
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+## Examples
+
+pancake-frontend/src/components/SearchModal/[CurrencyList.tsx](https://github.com/pancakeswap/pancake-frontend/blob/develop/src/components/SearchModal/CurrencyList.tsx)
+
 ## Available Scripts
 
 In the project directory, you can run:
